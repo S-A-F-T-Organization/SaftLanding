@@ -1,0 +1,410 @@
+/* 
+    Standards:
+        section content: 4rem margin
+
+    Common media screen sizing breakpoints:
+        500-600: very small screens 
+        800: mediumish screens
+        1450: large desktop screens
+
+    Font:
+        Indivisible Regular
+        font-family: "indivisible", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        Indivisible Italic
+        font-family: "indivisible", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+
+        Indivisible Bold
+        font-family: "indivisible", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        Indivisible Bold Italic
+        font-family: "indivisible", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+
+    light purple
+    #5f569f
+
+    medium purple
+    #594f9b
+
+    Dark purple
+    #342c6f
+
+    blue
+    #73b1df
+
+    pink
+    #e37d70
+
+    off-white
+    #f3eef6
+*/
+
+
+
+/* 
+    Reset values
+    Remove default styling 
+*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+section h1 {
+    text-align: center;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+
+/* 
+    Global values 
+    Used to standardize common elements
+*/
+html {
+    scroll-behavior: smooth;
+
+    font-family: "indivisible", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #342c6f;
+}
+p {
+    line-height:28px;
+} 
+a { /* All will have a rounded look with hover capabilities */
+    font-size: medium;
+    font-weight: bold;
+    
+    border-radius: 24px;
+    border-style: solid;
+    border-width: 2px;
+
+    padding: 12px 20px 12px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;  
+}
+
+/* 
+    Landing Page selectors 
+*/
+#HomepageHero  {
+    min-height: 100vh;
+    background-image: linear-gradient(to top right, #342c6f, #5f569f);
+    color: #f3eef6;
+}
+#HeroBackground {
+    min-height: 100vh;
+    width: 100vh;
+}
+
+#HomepageHeroContent {
+    height: calc(100% - 6rem);;
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+#HomepageHeroLowerContent {
+    display: flex;
+    flex-direction: row;
+}
+#HomepageHeroLowerContent img {
+    margin-left: auto;
+    margin-right: 4rem;
+}
+
+#HomepageHeroNavigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#HomepageHeroNavigationLinks {
+    margin-left: auto;
+}
+
+#HomepageHeroNavigationLinks a {
+    margin-right: 2rem;
+    color: #f3eef6;
+    border-color: #f3eef6;
+    
+}
+#HomepageHeroNavigationLinks a:hover {
+    background-color: #f3eef6;
+    color: #594f9b; 
+}
+@media only screen and (max-width: 800px) { /* Ensure top buttons dont get smushed on smaller screen sizes */
+    #HomepageHeroNavigationLinks { 
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+    #HomepageHeroNavigationLinks a { 
+        margin-top: 1rem;
+        margin-right: 0rem;
+    }
+}
+
+#HomepageHeroTitle {
+    margin-left: 2rem;
+}
+#HomepageHeroTitle h1 {
+    font-size: 32px;
+    margin: 0px;
+}
+#HomepageHeroTitle h3 {
+    font-size: 16px;
+    /* margin-bottom: 4px; */
+    margin-top: 0px;
+}
+
+#HeroCallToAction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    height: 100%;
+    padding: 4rem 4rem 0rem 4rem;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) { /* Call to action text scales to the view its on, */
+    #HeroCallToAction {
+        font-size: 24px;
+        padding: 1rem 1rem 0rem 1rem;
+    }
+}
+@media only screen and (min-width: 601px) and (max-width: 800px) { /* Call to action text scales to the view its on, */
+    #HeroCallToAction {
+        font-size: 36px;
+    }
+}
+#HeroCallToAction .button-group {
+    margin-top: auto;
+    margin-bottom: 2rem;
+}
+#HeroCallToAction .button-group a {
+    color: #f3eef6;
+    border-color: #e37d70;
+}
+
+#HeroCallToAction .button-group a:hover {
+    background-color: #e37d70;
+    color: #594f9b; 
+}
+
+/* 
+    What We Do selectors
+*/
+#WhatWeDo {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+#WhatWeDoContent {
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+@media only screen and (max-width: 550px) { /* Reduces side margins to prevent text from becoming too squashed and strung out */
+    #WhatWeDoContent {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+}
+#WhatWeDoContentText {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+@media only screen and (max-width: 600px) { /* Display text sections in a column when screen size gets too small */
+    #WhatWeDoContentText {
+        display: flex;
+        flex-direction: column;
+    }
+}
+#WhatAreWeBuilding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 24rem;
+    margin: 0rem 2rem 0rem 2rem;
+}
+#WhatAreWeBuilding img {
+    transform: rotate(90deg);
+}
+#HowItWillBeUsed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 24rem;
+    margin: 0rem 2rem 0rem 2rem;
+}
+@media only screen and (max-width: 600px) { /* Adjust text section margin between each other to fit new directionality */
+    #WhatAreWeBuilding {
+        margin: 2rem 0rem 2rem 0rem;
+    }
+    #HowItWillBeUsed {
+        margin: 2rem 0rem 2rem 0rem;
+    }
+}
+
+/* 
+    Our Story selectors
+*/
+#OurStory {
+    margin-top: 8rem;
+    padding: 2rem;
+    background-color: #f3eef6;
+
+    border-radius: 16px;
+
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+@media only screen and (max-width: 650px) { /* Reduces side margins to prevent text from becoming too squashed and strung out */
+    #OurStory {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+#OurStory img {
+    width: auto;
+    height: 100%;
+}
+
+#OurStoryContent {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#OurStoryBlurb p {
+    margin: 2rem;
+}
+@media only screen and (max-width: 500px) { /* Reduces side margins to prevent text from becoming too squashed and strung out */
+    #OurStoryBlurb p {
+        margin: 0.5rem;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 800px) { /* Reduces side margins to prevent text from becoming too squashed and strung out */
+    #OurStoryBlurb p {
+        margin: 1rem;
+    }
+}
+
+/* 
+    Meet Our Team selectors
+*/
+#MeetOurTeam {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    margin-right: 8rem;
+    margin-left: 8rem;
+}
+@media only screen and (max-width: 800px) { /* Reduces side margins to prevent text from becoming too squashed and strung out */
+    #MeetOurTeam {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}
+
+.contributorProfile {
+    margin: 2rem;
+}
+@media only screen and (max-width: 1450px) { /* Send items to center when they can no longer be stacked horizontally */
+    .contributorProfile {
+        margin: 0rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+#MeetOurTeamContributorList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0rem;
+}
+@media only screen and (max-width: 1450px) { /* Send items to center when they can no longer be stacked horizontally */
+    #MeetOurTeamContributorList {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.contributorProfileContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.contributorProfileContentText {
+    width: 24rem;
+}
+@media only screen and (max-width: 800px) { /* Send items to center when they can no longer be stacked horizontally */
+    .contributorProfileContentText {
+        width: 12rem;
+    }
+}
+.contributorProfileContentText h3 {
+    margin-top: 0px;
+}
+.headshot {
+    margin-left: 1rem;
+    height: 125px;
+    width: 125px;
+    background-color: grey;
+    border-radius: 16px;
+}
+.contributorProfileLinks{
+    margin-top: 2rem;
+}
+.contributorProfileLinks a {
+    border-color: #73b1df;
+    color: #73b1df;
+}
+.contributorProfileLinks a:hover {
+    background-color: #73b1df;
+    color: #f3eef6; 
+}
+
+footer {
+    margin-top: 8rem;
+    padding-left: 8rem;
+    background-color: #342c6f;
+    color: #f3eef6;
+}
+@media only screen and (max-width: 800px) { /* Reduces side margins to prevent text from becoming too squashed and strung out */
+    footer {
+        padding-left: 1rem;
+    }
+}
