@@ -1,2 +1,2 @@
 # saftLanding
-The static landing page for the S.A.F.T. orgainization.
+The static landing page for the S.A.F.T. organization.
